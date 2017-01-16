@@ -1,0 +1,73 @@
+<!doctype html>
+
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>WebRTC</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+        <style>
+            body {
+                padding-top: 5rem;
+                background-color: #606052;
+            }
+            video {
+                background-color: #80806c;
+                border-radius: 15px;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <nav class="navbar navbar-fixed-top navbar-dark bg-inverse fixed-top">
+            <a href="#" class="navbar-brand">WebRTC</a>
+        </nav>
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-sm-6">
+                    <h2>Réception</h2>
+                    <video id="receiver-video" width="100%" height="400px"></video>
+                    <p><button id="start" class="btn btn-primary">Démarrer la conversation</button></p>
+                </div>
+
+                <div class="col-sm-6">
+                    <h2>Envoie</h2>
+                    <video id="emitter-video" width="100%" height="400px"></video>
+                    <p><button id="receive" class="btn btn-primary">Recevoir la conversation</button></p>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-sm-6">
+                    <textarea id="offer" cols="30" rows="10" class="form-control"></textarea>
+                </div>
+
+                <div class="col-sm-6">
+                    <form class="form-control" id="incoming">
+                        <div class="form-group">
+                            <textarea cols="30" rows="10" class="form-control"></textarea>
+                        </div>
+                        <p><button type="submit" class="btn btn-primary">Enregistrer l'offre</button></p>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+        <script src="simplepeer.min.js"></script>
+        <script src="app.js"></script>
+
+    </body>
+
+</html>
